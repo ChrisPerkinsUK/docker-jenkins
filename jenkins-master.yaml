@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+
+  jenkins-master:
+    image: jenkins/jenkins:lts
+
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+
+    volumes:
+      - type: volume
+        source: jenkins-home
+        target: /var/jenkins_home
+
+volumes:
+  jenkins-home:
