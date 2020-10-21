@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+
+  jenkins-build:
+    build:
+      context: .
+      dockerfile: jenkins.Dockerfile
+      args:
+        maintainer: chrisperkins.cap@gmail.com
+        version: 0.0.1
+    image: chrisperkins/jenkins-docker:0.0.1
